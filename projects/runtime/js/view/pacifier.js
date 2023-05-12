@@ -1,6 +1,6 @@
 (function (window) {
     window.opspark = window.opspark || {};
-    
+   
     window.opspark.makePacifier = function (target, options) {
         options = (options ? options : {
               lines: 13 // The number of lines to draw
@@ -20,10 +20,12 @@
             , className: 'spinner' // The CSS class to assign to the spinner
             , top: '50%' // Top position relative to parent
             , left: '50%' // Left position relative to parent
-            , shadow: false // Whether to render a shadow
+            , shadow: true // Whether to render a shadow
             , hwaccel: false // Whether to use hardware acceleration
             , position: 'absolute' // Element positioning
         });
         return new Spinner(options).spin(target);
     };
 }(window));
+
+
